@@ -25,6 +25,7 @@ def sms():
                         )
 
         print(message.sid)
+        print(message.sid)
         print(message.body)
         return("sms sent")
     else:
