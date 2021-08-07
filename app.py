@@ -12,13 +12,14 @@ def sms():
     if request.method == "POST":
 
         tonum = request.form["smsnum"]
+        tobody = str(request.form["smsbody"])
         account_sid = 'AC46648a764504d96ef5f6ff9d7c493117'
-        auth_token = 'e93bf8dd9e97aced2da820ba8ea48d65'
+        auth_token = '11eb94b229fa1348c2ce5fe730254d4c'
         client = Client(account_sid, auth_token)
 
         message = client.messages \
                         .create(
-                            body="You the operator are the protector of souls. ☀🌧",
+                            body=tobody,
                             from_='+19035002648',
                             to=tonum
                         )
